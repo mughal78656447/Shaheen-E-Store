@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAHEEN E-STORE | Gaming Services & Top-Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero-header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1 class="store-title">SHAHEEN E-STORE</h1>
+            <p class="tagline">The Name of Trust</p>
+            <span class="guarantee-badge"><i class="fa-solid fa-shield-halved"></i> 100% Satisfaction Guarantee</span>
+        </div>
+    </header>
+
+    <!-- Contact Info Bar -->
+    <nav class="contact-bar">
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> 0300 6914487</div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> 0312 6914187</div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> shaheengamingstore@gmail.com</div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- PUBG UC Section -->
+        <section class="section-box">
+            <h2 class="section-heading"><i class="fa-solid fa-crosshairs"></i> PUBG Mobile UC Top-Up</h2>
+            <p class="rate-note">* All prices are calculated as: <strong>Midasbuy Official Rate + RS 50</strong></p>
+            
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>PUBG Character ID / Name:</label>
+                    <input type="text" id="pubg-id" placeholder="e.g. 5123456789">
+                </div>
+                <div class="input-group">
+                    <label>Select Region:</label>
+                    <select id="pubg-region">
+                        <option value="Global Region">Global Region</option>
+                        <option value="Korean Region">Korean Region</option>
+                        <option value="Other Regions">Other Regions</option>
+                        <option value="UC Voucher Code">UC Voucher Code</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Select UC Pack (Rates + 50 RS):</label>
+                    <select id="pubg-uc-pack">
+                        <option value="60 UC (Midasbuy Rate + RS 50)">60 UC</option>
+                        <option value="325 UC (Midasbuy Rate + RS 50)">325 UC</option>
+                        <option value="660 UC (Midasbuy Rate + RS 50)">660 UC</option>
+                        <option value="1800 UC (Midasbuy Rate + RS 50)">1800 UC</option>
+                        <option value="3850 UC (Midasbuy Rate + RS 50)">3850 UC</option>
+                        <option value="8100 UC (Midasbuy Rate + RS 50)">8100 UC</option>
+                        <option value="10000 UC (Midasbuy Rate + RS 50)">10,000 UC</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-whatsapp" onclick="orderPUBG()"><i class="fa-brands fa-whatsapp"></i> Buy UC via WhatsApp</button>
+        </section>
+
+        <!-- Services Grid -->
+        <h2 class="section-title">All Available Services</h2>
+        <div class="services-grid">
+
+            <!-- TikTok Accounts & Coins -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-brands fa-tiktok"></i></div>
+                <h3>TikTok Services</h3>
+                <p>Buy/Sell TikTok Accounts, Monetized Pages & TikTok Coins Top-Up.</p>
+                <select id="tiktok-opt" class="card-select">
+                    <option value="Buy TikTok Account">Buy TikTok Account</option>
+                    <option value="Sell TikTok Account">Sell TikTok Account</option>
+                    <option value="TikTok Coins Top-Up">TikTok Coins Top-Up</option>
+                </select>
+                <button class="btn-card" onclick="orderGeneric('TikTok Service', 'tiktok-opt')"><i class="fa-brands fa-whatsapp"></i> Order Now</button>
+            </div>
+
+            <!-- YouTube Channels -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-brands fa-youtube"></i></div>
+                <h3>YouTube Channels</h3>
+                <p>Monetized Channels, Fresh Channels, Subscribers & Watchtime.</p>
+                <select id="yt-opt" class="card-select">
+                    <option value="Buy Monetized Channel">Buy Monetized Channel</option>
+                    <option value="Buy Fresh Channel">Buy Fresh Channel</option>
+                    <option value="Sell Channel">Sell YouTube Channel</option>
+                    <option value="Subscribers & Watchtime">Subscribers & Watchtime</option>
+                </select>
+                <button class="btn-card" onclick="orderGeneric('YouTube Channel', 'yt-opt')"><i class="fa-brands fa-whatsapp"></i> Order Now</button>
+            </div>
+
+            <!-- Yalla Ludo Diamonds -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+                <h3>Yalla Ludo Diamonds</h3>
+                <p>Instant Yalla Ludo Diamonds Top-Up at Best Rates.</p>
+                <input type="text" id="yalla-id" class="card-input" placeholder="Enter Yalla Ludo ID">
+                <button class="btn-card" onclick="orderYalla()"><i class="fa-brands fa-whatsapp"></i> Order Diamonds</button>
+            </div>
+
+            <!-- PUBG Cards & Vouchers -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-car-side"></i></div>
+                <h3>PUBG Special Vouchers</h3>
+                <p>PUBG Car Cards, X-Suit Cards & All Game In-App Purchases.</p>
+                <select id="pubg-cards-opt" class="card-select">
+                    <option value="Car Cards">PUBG Car Cards</option>
+                    <option value="X-Suit Cards">PUBG X-Suit Cards</option>
+                    <option value="In-App Top-Up">All App Top-Up</option>
+                </select>
+                <button class="btn-card" onclick="orderGeneric('PUBG Cards/Vouchers', 'pubg-cards-opt')"><i class="fa-brands fa-whatsapp"></i> Order Now</button>
+            </div>
+
+            <!-- Social Media Accounts -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-brands fa-instagram"></i></div>
+                <h3>Social Media Accounts</h3>
+                <p>Instagram Accounts, Facebook Pages, and Marketing Services.</p>
+                <select id="social-opt" class="card-select">
+                    <option value="Instagram Account">Instagram Account</option>
+                    <option value="Facebook Page/Account">Facebook Page / Account</option>
+                    <option value="Other Social Media">Other Social Media Services</option>
+                </select>
+                <button class="btn-card" onclick="orderGeneric('Social Media Accounts', 'social-opt')"><i class="fa-brands fa-whatsapp"></i> Order Now</button>
+            </div>
+
+        </div>
+
+        <!-- Payment Section -->
+        <section class="payment-card">
+            <h3>Supported Payment Methods</h3>
+            <div class="payment-methods">
+                <span class="badge-jazzcash"><i class="fa-solid fa-wallet"></i> JazzCash</span>
+                <span class="badge-easypaisa"><i class="fa-solid fa-mobile-screen-button"></i> EasyPaisa</span>
+            </div>
+            <p>Send payment on <strong>0300 6914487</strong> or <strong>0312 6914187</strong> after order confirmation.</p>
+        </section>
+
+    </main>
+
+    <!-- Floating WhatsApp Buttons -->
+    <div class="floating-container">
+        <!-- Join Group Button -->
+        <a href="https://chat.whatsapp.com/HDkFb959A065JbwnaFwbCq" target="_blank" class="float-btn float-group">
+            <span class="tooltip">Join WA Group</span>
+            <i class="fa-solid fa-users"></i>
+        </a>
+        <!-- Direct Chat Button -->
+        <a href="https://wa.me/923006914487" target="_blank" class="float-btn float-chat">
+            <span class="tooltip">Direct Chat</span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SHAHEEN E-STORE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
