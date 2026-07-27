@@ -1,6 +1,6 @@
 const targetWhatsApp = "923006914487";
 
-// Order PUBG UC Function
+// Order PUBG UC
 function orderPUBG() {
     const pubgID = document.getElementById('pubg-id').value.trim();
     const region = document.getElementById('pubg-region').value;
@@ -11,7 +11,7 @@ function orderPUBG() {
         return;
     }
 
-    const message = `*NEW PUBG UC ORDER - SHAHEEN GAMING STORE*%0A%0A` +
+    const message = `*NEW PUBG UC ORDER - SHAHEEN E-STORE*%0A%0A` +
                     `*Character ID/Name:* ${pubgID}%0A` +
                     `*Region:* ${region}%0A` +
                     `*UC Pack:* ${pack}%0A%0A` +
@@ -20,7 +20,7 @@ function orderPUBG() {
     window.open(`https://wa.me/${targetWhatsApp}?text=${message}`, '_blank');
 }
 
-// Order Yalla Ludo Diamonds Function
+// Order Yalla Ludo Diamonds
 function orderYalla() {
     const yallaID = document.getElementById('yalla-id').value.trim();
 
@@ -29,18 +29,18 @@ function orderYalla() {
         return;
     }
 
-    const message = `*YALLA LUDO DIAMONDS ORDER - SHAHEEN GAMING STORE*%0A%0A` +
+    const message = `*YALLA LUDO DIAMONDS ORDER - SHAHEEN E-STORE*%0A%0A` +
                     `*User ID:* ${yallaID}%0A%0A` +
                     `Please send me the price list.`;
 
     window.open(`https://wa.me/${targetWhatsApp}?text=${message}`, '_blank');
 }
 
-// Order Generic Service Function
+// Generic Orders
 function orderGeneric(serviceTitle, elementId) {
     const selectedOption = document.getElementById(elementId).value;
 
-    const message = `*NEW INQUIRY - SHAHEEN GAMING STORE*%0A%0A` +
+    const message = `*NEW INQUIRY - SHAHEEN E-STORE*%0A%0A` +
                     `*Service:* ${serviceTitle}%0A` +
                     `*Selected Option:* ${selectedOption}%0A%0A` +
                     `I am interested in this. Please provide price and details.`;
