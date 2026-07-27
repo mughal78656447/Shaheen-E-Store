@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHAHEEN E-STORE | Gaming Services & Top-Up</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Header Section -->
     <header class="hero-header">
-        <div class="overlay"></div>
         <div class="header-content">
             <h1 class="store-title">SHAHEEN E-STORE</h1>
             <p class="tagline">The Name of Trust</p>
@@ -19,7 +22,7 @@
         </div>
     </header>
 
-    <!-- Contact Info Bar -->
+    <!-- Contact Bar -->
     <nav class="contact-bar">
         <div class="contact-item"><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> 0300 6914487</div>
         <div class="contact-item"><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> 0312 6914187</div>
@@ -29,10 +32,9 @@
     <!-- Main Container -->
     <main class="container">
 
-        <!-- PUBG UC Section -->
+        <!-- PUBG Mobile UC Top-Up Section -->
         <section class="section-box">
             <h2 class="section-heading"><i class="fa-solid fa-crosshairs"></i> PUBG Mobile UC Top-Up</h2>
-            <p class="rate-note">* All prices are calculated as: <strong>Midasbuy Official Rate + RS 50</strong></p>
             
             <div class="form-grid">
                 <div class="input-group">
@@ -49,15 +51,15 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <label>Select UC Pack (Rates + 50 RS):</label>
+                    <label>Select UC Pack:</label>
                     <select id="pubg-uc-pack">
-                        <option value="60 UC (Midasbuy Rate + RS 50)">60 UC</option>
-                        <option value="325 UC (Midasbuy Rate + RS 50)">325 UC</option>
-                        <option value="660 UC (Midasbuy Rate + RS 50)">660 UC</option>
-                        <option value="1800 UC (Midasbuy Rate + RS 50)">1800 UC</option>
-                        <option value="3850 UC (Midasbuy Rate + RS 50)">3850 UC</option>
-                        <option value="8100 UC (Midasbuy Rate + RS 50)">8100 UC</option>
-                        <option value="10000 UC (Midasbuy Rate + RS 50)">10,000 UC</option>
+                        <option value="60 UC">60 UC</option>
+                        <option value="325 UC">325 UC</option>
+                        <option value="660 UC">660 UC</option>
+                        <option value="1800 UC">1800 UC</option>
+                        <option value="3850 UC">3850 UC</option>
+                        <option value="8100 UC">8100 UC</option>
+                        <option value="10000 UC">10,000 UC</option>
                     </select>
                 </div>
             </div>
@@ -68,7 +70,7 @@
         <h2 class="section-title">All Available Services</h2>
         <div class="services-grid">
 
-            <!-- TikTok Accounts & Coins -->
+            <!-- TikTok Services -->
             <div class="card">
                 <div class="card-icon"><i class="fa-brands fa-tiktok"></i></div>
                 <h3>TikTok Services</h3>
@@ -81,7 +83,7 @@
                 <button class="btn-card" onclick="orderGeneric('TikTok Service', 'tiktok-opt')"><i class="fa-brands fa-whatsapp"></i> Order Now</button>
             </div>
 
-            <!-- YouTube Channels -->
+            <!-- YouTube Services -->
             <div class="card">
                 <div class="card-icon"><i class="fa-brands fa-youtube"></i></div>
                 <h3>YouTube Channels</h3>
@@ -104,7 +106,7 @@
                 <button class="btn-card" onclick="orderYalla()"><i class="fa-brands fa-whatsapp"></i> Order Diamonds</button>
             </div>
 
-            <!-- PUBG Cards & Vouchers -->
+            <!-- PUBG Special Vouchers -->
             <div class="card">
                 <div class="card-icon"><i class="fa-solid fa-car-side"></i></div>
                 <h3>PUBG Special Vouchers</h3>
@@ -117,7 +119,7 @@
                 <button class="btn-card" onclick="orderGeneric('PUBG Cards/Vouchers', 'pubg-cards-opt')"><i class="fa-brands fa-whatsapp"></i> Order Now</button>
             </div>
 
-            <!-- Social Media Accounts -->
+            <!-- Social Media Services -->
             <div class="card">
                 <div class="card-icon"><i class="fa-brands fa-instagram"></i></div>
                 <h3>Social Media Accounts</h3>
@@ -132,7 +134,7 @@
 
         </div>
 
-        <!-- Payment Section -->
+        <!-- Payment Methods Section -->
         <section class="payment-card">
             <h3>Supported Payment Methods</h3>
             <div class="payment-methods">
@@ -146,12 +148,12 @@
 
     <!-- Floating WhatsApp Buttons -->
     <div class="floating-container">
-        <!-- Join Group Button -->
+        <!-- WhatsApp Group Button -->
         <a href="https://chat.whatsapp.com/HDkFb959A065JbwnaFwbCq" target="_blank" class="float-btn float-group">
             <span class="tooltip">Join WA Group</span>
             <i class="fa-solid fa-users"></i>
         </a>
-        <!-- Direct Chat Button -->
+        <!-- Direct WhatsApp Chat Button -->
         <a href="https://wa.me/923006914487" target="_blank" class="float-btn float-chat">
             <span class="tooltip">Direct Chat</span>
             <i class="fa-brands fa-whatsapp"></i>
@@ -163,6 +165,7 @@
         <p>&copy; 2026 SHAHEEN E-STORE. All Rights Reserved.</p>
     </footer>
 
+    <!-- Link External JS -->
     <script src="script.js"></script>
 </body>
 </html>
