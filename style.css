@@ -1,111 +1,135 @@
 :root {
-    --bg-dark: #0a0b0d;
-    --card-bg: #14171d;
+    --bg-dark: #07080a;
+    --card-bg: #11141b;
     --accent-gold: #f39c12;
+    --pubg-orange: #ff7700;
     --text-main: #ffffff;
-    --text-muted: #a0a5b1;
+    --text-muted: #9aa1b1;
     --whatsapp-color: #25d366;
-    --border-color: #262b36;
+    --border-color: #1f2532;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: var(--bg-dark);
+    /* PUBG Dark Textured Gradient Background */
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255, 119, 0, 0.12), transparent 70%),
+        radial-gradient(circle at 10% 40%, rgba(243, 156, 18, 0.05), transparent 50%);
     color: var(--text-main);
-    line-height: 1.6;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
-/* Header Section */
+h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* PUBG Header Section */
 .hero-header {
     position: relative;
-    background: linear-gradient(135deg, #111116, #1c222e);
+    background: linear-gradient(180deg, rgba(5,5,8,0.8) 0%, rgba(17,20,27,0.95) 100%), 
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
     text-align: center;
-    padding: 50px 20px;
-    border-bottom: 3px solid var(--accent-gold);
+    padding: 60px 20px 45px;
+    border-bottom: 3px solid var(--pubg-orange);
+    box-shadow: 0 5px 25px rgba(255, 119, 0, 0.25);
 }
 
 .store-title {
-    font-size: 2.8rem;
-    color: var(--accent-gold);
-    text-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
-    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 119, 0, 0.8), 0 0 30px rgba(243, 156, 18, 0.5);
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.store-title i {
+    color: var(--pubg-orange);
 }
 
 .tagline {
     font-size: 1.2rem;
     color: var(--text-muted);
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .guarantee-badge {
-    background-color: var(--accent-gold);
+    background: linear-gradient(90deg, var(--pubg-orange), var(--accent-gold));
     color: #000;
-    padding: 6px 18px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 0.95rem;
     display: inline-block;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(255, 119, 0, 0.5);
 }
 
 /* Contact Bar */
 .contact-bar {
-    background-color: #101216;
+    background-color: #0c0e13;
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 15px;
+    padding: 12px;
     flex-wrap: wrap;
     border-bottom: 1px solid var(--border-color);
 }
 
 .contact-item {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--accent-gold);
+    font-weight: 600;
 }
 
 /* Container */
 .container {
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 35px auto;
     padding: 0 20px;
 }
 
-/* PUBG Form Box */
+/* Main Top-Up PUBG Box */
 .section-box {
-    background-color: var(--card-bg);
-    border: 2px solid var(--accent-gold);
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: linear-gradient(145deg, #131722, #0d1017);
+    border: 2px solid var(--pubg-orange);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 45px;
+    box-shadow: 0 0 20px rgba(255, 119, 0, 0.25);
+    position: relative;
 }
 
 .section-heading {
-    color: var(--accent-gold);
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+    color: var(--pubg-orange);
+    font-size: 1.8rem;
+    margin-bottom: 22px;
+    text-transform: uppercase;
 }
 
 .form-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 18px;
+    margin-bottom: 22px;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 8px;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .input-group input, 
@@ -114,24 +138,27 @@ body {
 .card-input {
     width: 100%;
     padding: 12px;
-    background-color: #0b0c10;
+    background-color: #080a0e;
     border: 1px solid var(--border-color);
     color: #fff;
     border-radius: 6px;
     outline: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
 }
 
 .input-group input:focus, 
 .input-group select:focus, 
 .card-select:focus, 
 .card-input:focus {
-    border-color: var(--accent-gold);
+    border-color: var(--pubg-orange);
+    box-shadow: 0 0 8px rgba(255, 119, 0, 0.4);
 }
 
 .btn-whatsapp {
     width: 100%;
-    background-color: var(--whatsapp-color);
+    background: linear-gradient(90deg, #25d366, #128c7e);
     color: #fff;
     padding: 14px;
     border: none;
@@ -140,35 +167,38 @@ body {
     font-size: 1.1rem;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.btn-whatsapp:hover {
-    background-color: #1eb854;
-}
-
-/* Services Grid */
-.section-title {
-    text-align: center;
-    color: var(--accent-gold);
-    margin-bottom: 30px;
-    font-size: 2rem;
     text-transform: uppercase;
 }
 
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* Section Headings */
+.section-title {
+    text-align: center;
+    color: var(--accent-gold);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+/* Services Cards Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 22px;
 }
 
 .card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    padding: 20px;
+    padding: 22px;
     text-align: center;
-    transition: transform 0.3s, border-color 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 .card:hover {
@@ -176,20 +206,30 @@ body {
     border-color: var(--accent-gold);
 }
 
+.pubg-card {
+    border-color: rgba(255, 119, 0, 0.4);
+}
+
+.pubg-card:hover {
+    border-color: var(--pubg-orange);
+    box-shadow: 0 5px 20px rgba(255, 119, 0, 0.3);
+}
+
 .card-icon {
-    font-size: 2.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 15px;
+    font-size: 2.6rem;
+    color: var(--pubg-orange);
+    margin-bottom: 12px;
 }
 
 .card h3 {
     margin-bottom: 10px;
     color: #fff;
+    font-size: 1.2rem;
 }
 
 .card p {
     color: var(--text-muted);
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     margin-bottom: 15px;
 }
 
@@ -202,12 +242,13 @@ body {
     width: 100%;
     background-color: var(--whatsapp-color);
     color: #fff;
-    padding: 10px;
+    padding: 11px;
     border: none;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    text-transform: uppercase;
 }
 
 .btn-card:hover {
@@ -221,27 +262,18 @@ body {
     border-radius: 10px;
     text-align: center;
     padding: 25px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .payment-methods {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin: 15px 0;
 }
 
-.badge-jazzcash { 
-    color: #ff3333; 
-    font-weight: bold; 
-    font-size: 1.2rem; 
-}
-
-.badge-easypaisa { 
-    color: #00b050; 
-    font-weight: bold; 
-    font-size: 1.2rem; 
-}
+.badge-jazzcash { color: #ff3333; font-weight: bold; font-size: 1.3rem; }
+.badge-easypaisa { color: #00b050; font-weight: bold; font-size: 1.3rem; }
 
 /* Floating WhatsApp Buttons */
 .floating-container {
@@ -265,7 +297,7 @@ body {
     font-size: 26px;
     text-decoration: none;
     position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 .float-group { background-color: #128C7E; }
@@ -273,14 +305,16 @@ body {
 
 .float-btn .tooltip {
     visibility: hidden;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
-    font-size: 11px;
-    padding: 4px 8px;
+    font-size: 12px;
+    padding: 4px 10px;
     border-radius: 4px;
     position: absolute;
     right: 65px;
     white-space: nowrap;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
 }
 
 .float-btn:hover .tooltip {
@@ -289,9 +323,10 @@ body {
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #050507;
+    padding: 25px;
+    background-color: #040507;
     color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-top: 40px;
+    font-size: 0.95rem;
+    margin-top: 50px;
+    border-top: 1px solid var(--border-color);
 }
