@@ -1,12 +1,12 @@
 :root {
-    --bg-dark: #07080a;
-    --card-bg: #11141b;
-    --accent-gold: #f39c12;
-    --pubg-orange: #ff7700;
-    --text-main: #ffffff;
-    --text-muted: #9aa1b1;
-    --whatsapp-color: #25d366;
-    --border-color: #1f2532;
+    --pubg-yellow: #ffb400;
+    --pubg-orange: #ff5500;
+    --pubg-black: #08090c;
+    --pubg-dark-card: #12141c;
+    --pubg-border: #2a3142;
+    --text-white: #ffffff;
+    --text-gray: #a2a8b8;
+    --whatsapp-green: #25d366;
 }
 
 * {
@@ -16,110 +16,141 @@
 }
 
 body {
-    background-color: var(--bg-dark);
-    /* PUBG Dark Textured Gradient Background */
+    background-color: var(--pubg-black);
+    /* Full Tactical PUBG Background Design */
     background-image: 
-        radial-gradient(circle at 50% 0%, rgba(255, 119, 0, 0.12), transparent 70%),
-        radial-gradient(circle at 10% 40%, rgba(243, 156, 18, 0.05), transparent 50%);
-    color: var(--text-main);
+        linear-gradient(rgba(8, 9, 12, 0.92), rgba(8, 9, 12, 0.96)),
+        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-white);
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.1rem;
     line-height: 1.5;
 }
 
-h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 1px;
+/* Typography Overrides for PUBG Theme */
+h1, h2, h3, .store-title, .pubg-tag, .airdrop-badge, .btn-pubg-primary, .btn-card {
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 1.5px;
 }
 
-/* PUBG Header Section */
+/* Top PUBG Marquee Bar */
+.pubg-top-bar {
+    background-color: var(--pubg-yellow);
+    color: #000;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 10px rgba(255, 180, 0, 0.8);
+}
+
+/* Hero Header */
 .hero-header {
     position: relative;
-    background: linear-gradient(180deg, rgba(5,5,8,0.8) 0%, rgba(17,20,27,0.95) 100%), 
-                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    padding: 50px 20px 40px;
     text-align: center;
-    padding: 60px 20px 45px;
-    border-bottom: 3px solid var(--pubg-orange);
-    box-shadow: 0 5px 25px rgba(255, 119, 0, 0.25);
+    border-bottom: 3px solid var(--pubg-yellow);
+    background: linear-gradient(180deg, rgba(255, 180, 0, 0.12) 0%, transparent 100%);
+}
+
+.pubg-tag {
+    display: inline-block;
+    background-color: var(--pubg-orange);
+    color: #fff;
+    padding: 4px 14px;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
 }
 
 .store-title {
-    font-size: 2.5rem;
-    color: #ffffff;
-    text-shadow: 0 0 15px rgba(255, 119, 0, 0.8), 0 0 30px rgba(243, 156, 18, 0.5);
+    font-size: 2.8rem;
+    color: var(--pubg-yellow);
+    text-shadow: 3px 3px 0px #000, 0 0 25px rgba(255, 180, 0, 0.7);
     text-transform: uppercase;
-    font-weight: 900;
     margin-bottom: 5px;
-}
-
-.store-title i {
-    color: var(--pubg-orange);
 }
 
 .tagline {
     font-size: 1.2rem;
-    color: var(--text-muted);
+    color: var(--text-gray);
+    font-weight: 700;
     margin-bottom: 15px;
-    font-weight: 600;
 }
 
 .guarantee-badge {
-    background: linear-gradient(90deg, var(--pubg-orange), var(--accent-gold));
+    background: var(--pubg-yellow);
     color: #000;
     padding: 6px 20px;
-    border-radius: 4px;
+    font-size: 0.9rem;
     font-weight: 800;
-    font-size: 0.95rem;
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
     display: inline-block;
     text-transform: uppercase;
-    box-shadow: 0 0 10px rgba(255, 119, 0, 0.5);
 }
 
 /* Contact Bar */
 .contact-bar {
-    background-color: #0c0e13;
+    background-color: #0d0e14;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
     padding: 12px;
     flex-wrap: wrap;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--pubg-border);
 }
 
 .contact-item {
     font-size: 1rem;
-    color: var(--accent-gold);
-    font-weight: 600;
+    color: var(--pubg-yellow);
+    font-weight: 700;
 }
 
-/* Container */
+/* Main Container */
 .container {
     max-width: 1100px;
     margin: 35px auto;
     padding: 0 20px;
 }
 
-/* Main Top-Up PUBG Box */
+/* PUBG Airdrop Box (UC Top-Up) */
 .section-box {
-    background: linear-gradient(145deg, #131722, #0d1017);
-    border: 2px solid var(--pubg-orange);
+    background: var(--pubg-dark-card);
+    border: 2px solid var(--pubg-yellow);
     padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 45px;
-    box-shadow: 0 0 20px rgba(255, 119, 0, 0.25);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 25px rgba(255, 180, 0, 0.25);
     position: relative;
 }
 
+.airdrop-badge {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    background-color: var(--pubg-orange);
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    border: 1px solid var(--pubg-yellow);
+}
+
 .section-heading {
-    color: var(--pubg-orange);
+    color: var(--pubg-yellow);
     font-size: 1.8rem;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 0 #000;
 }
 
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 18px;
     margin-bottom: 22px;
 }
@@ -127,9 +158,9 @@ h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
 .input-group label {
     display: block;
     margin-bottom: 8px;
-    color: var(--text-muted);
+    color: var(--text-gray);
+    font-weight: 700;
     font-size: 1rem;
-    font-weight: 600;
 }
 
 .input-group input, 
@@ -138,53 +169,54 @@ h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
 .card-input {
     width: 100%;
     padding: 12px;
-    background-color: #080a0e;
-    border: 1px solid var(--border-color);
+    background-color: #07080b;
+    border: 1px solid var(--pubg-border);
     color: #fff;
-    border-radius: 6px;
+    border-radius: 4px;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .input-group input:focus, 
 .input-group select:focus, 
 .card-select:focus, 
 .card-input:focus {
-    border-color: var(--pubg-orange);
-    box-shadow: 0 0 8px rgba(255, 119, 0, 0.4);
+    border-color: var(--pubg-yellow);
+    box-shadow: 0 0 10px rgba(255, 180, 0, 0.4);
 }
 
-.btn-whatsapp {
+.btn-pubg-primary {
     width: 100%;
-    background: linear-gradient(90deg, #25d366, #128c7e);
-    color: #fff;
-    padding: 14px;
+    background: linear-gradient(90deg, var(--pubg-yellow), var(--pubg-orange));
+    color: #000;
+    padding: 15px;
     border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1.1rem;
+    border-radius: 4px;
+    font-size: 1.15rem;
     cursor: pointer;
     transition: 0.3s;
     text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4);
 }
 
-.btn-whatsapp:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+.btn-pubg-primary:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 20px rgba(255, 85, 0, 0.6);
 }
 
-/* Section Headings */
+/* Headings */
 .section-title {
     text-align: center;
-    color: var(--accent-gold);
+    color: var(--pubg-yellow);
     margin-bottom: 25px;
     font-size: 1.8rem;
     text-transform: uppercase;
+    text-shadow: 2px 2px 0 #000;
 }
 
-/* Services Cards Grid */
+/* Cards Grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -192,44 +224,41 @@ h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
 }
 
 .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
+    background-color: var(--pubg-dark-card);
+    border: 1px solid var(--pubg-border);
+    border-radius: 8px;
     padding: 22px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
 .pubg-card {
-    border-color: rgba(255, 119, 0, 0.4);
+    border-color: rgba(255, 180, 0, 0.3);
 }
 
-.pubg-card:hover {
-    border-color: var(--pubg-orange);
-    box-shadow: 0 5px 20px rgba(255, 119, 0, 0.3);
+.card:hover, .pubg-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pubg-yellow);
+    box-shadow: 0 5px 20px rgba(255, 180, 0, 0.3);
 }
 
 .card-icon {
     font-size: 2.6rem;
-    color: var(--pubg-orange);
+    color: var(--pubg-yellow);
     margin-bottom: 12px;
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 .card p {
-    color: var(--text-muted);
+    color: var(--text-gray);
     font-size: 0.95rem;
+    font-weight: 600;
     margin-bottom: 15px;
 }
 
@@ -240,12 +269,12 @@ h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
 
 .btn-card {
     width: 100%;
-    background-color: var(--whatsapp-color);
+    background-color: var(--whatsapp-green);
     color: #fff;
     padding: 11px;
     border: none;
-    border-radius: 6px;
-    font-weight: bold;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
     text-transform: uppercase;
@@ -253,13 +282,14 @@ h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
 
 .btn-card:hover {
     background-color: #1eb854;
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
 }
 
-/* Payment Section */
+/* Payment Box */
 .payment-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
+    background-color: var(--pubg-dark-card);
+    border: 1px solid var(--pubg-border);
+    border-radius: 8px;
     text-align: center;
     padding: 25px;
     margin-top: 50px;
@@ -272,10 +302,10 @@ h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
     margin: 15px 0;
 }
 
-.badge-jazzcash { color: #ff3333; font-weight: bold; font-size: 1.3rem; }
-.badge-easypaisa { color: #00b050; font-weight: bold; font-size: 1.3rem; }
+.badge-jazzcash { color: #ff3333; font-weight: 800; font-size: 1.3rem; }
+.badge-easypaisa { color: #00b050; font-weight: 800; font-size: 1.3rem; }
 
-/* Floating WhatsApp Buttons */
+/* Floating Buttons */
 .floating-container {
     position: fixed;
     bottom: 20px;
@@ -301,20 +331,19 @@ h1, h2, h3, .store-title, .btn-whatsapp, .btn-card {
 }
 
 .float-group { background-color: #128C7E; }
-.float-chat { background-color: var(--whatsapp-color); }
+.float-chat { background-color: var(--whatsapp-green); }
 
 .float-btn .tooltip {
     visibility: hidden;
-    background-color: #222;
-    color: #fff;
+    background-color: #000;
+    color: var(--pubg-yellow);
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 4px;
     position: absolute;
     right: 65px;
     white-space: nowrap;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
+    border: 1px solid var(--pubg-yellow);
 }
 
 .float-btn:hover .tooltip {
@@ -325,8 +354,8 @@ footer {
     text-align: center;
     padding: 25px;
     background-color: #040507;
-    color: var(--text-muted);
+    color: var(--text-gray);
     font-size: 0.95rem;
     margin-top: 50px;
-    border-top: 1px solid var(--border-color);
+    border-top: 2px solid var(--pubg-yellow);
 }
