@@ -1,7 +1,6 @@
-// Main WhatsApp Contact Number
 const targetWhatsApp = "923006914487";
 
-// Function to handle PUBG UC Order
+// Order PUBG UC Function
 function orderPUBG() {
     const pubgID = document.getElementById('pubg-id').value.trim();
     const region = document.getElementById('pubg-region').value;
@@ -15,14 +14,13 @@ function orderPUBG() {
     const message = `*NEW PUBG UC ORDER - SHAHEEN E-STORE*%0A%0A` +
                     `*Character ID/Name:* ${pubgID}%0A` +
                     `*Region:* ${region}%0A` +
-                    `*UC Pack:* ${pack}%0A` +
-                    `*Pricing:* Midasbuy Rate + RS 50%0A%0A` +
-                    `Please share total bill and payment details (JazzCash/EasyPaisa).`;
+                    `*UC Pack:* ${pack}%0A%0A` +
+                    `Please share the price and payment details.`;
 
     window.open(`https://wa.me/${targetWhatsApp}?text=${message}`, '_blank');
 }
 
-// Function to handle Yalla Ludo Order
+// Order Yalla Ludo Diamonds Function
 function orderYalla() {
     const yallaID = document.getElementById('yalla-id').value.trim();
 
@@ -38,7 +36,7 @@ function orderYalla() {
     window.open(`https://wa.me/${targetWhatsApp}?text=${message}`, '_blank');
 }
 
-// Generic function for TikTok, YouTube, Cards & Social Media
+// Order Generic Service Function
 function orderGeneric(serviceTitle, elementId) {
     const selectedOption = document.getElementById(elementId).value;
 
