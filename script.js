@@ -11,7 +11,7 @@ function orderPUBG() {
         return;
     }
 
-    const message = `*NEW PUBG UC ORDER - SHAHEEN E-STORE*%0A%0A` +
+    const message = `*NEW PUBG UC ORDER - SHAHEEN GAMING STORE*%0A%0A` +
                     `*Character ID/Name:* ${pubgID}%0A` +
                     `*Region:* ${region}%0A` +
                     `*UC Pack:* ${pack}%0A%0A` +
@@ -29,7 +29,7 @@ function orderYalla() {
         return;
     }
 
-    const message = `*YALLA LUDO DIAMONDS ORDER - SHAHEEN E-STORE*%0A%0A` +
+    const message = `*YALLA LUDO DIAMONDS ORDER - SHAHEEN GAMING STORE*%0A%0A` +
                     `*User ID:* ${yallaID}%0A%0A` +
                     `Please send me the price list.`;
 
@@ -40,10 +40,10 @@ function orderYalla() {
 function orderGeneric(serviceTitle, elementId) {
     const selectedOption = document.getElementById(elementId).value;
 
-    const message = `*NEW INQUIRY - SHAHEEN E-STORE*%0A%0A` +
+    const message = `*NEW INQUIRY - SHAHEEN GAMING STORE*%0A%0A` +
                     `*Service:* ${serviceTitle}%0A` +
                     `*Selected Option:* ${selectedOption}%0A%0A` +
-                    `I am interested in this service. Please provide price and details.`;
+                    `I am interested in this. Please provide price and details.`;
 
     window.open(`https://wa.me/${targetWhatsApp}?text=${message}`, '_blank');
 }
